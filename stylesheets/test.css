@@ -1,0 +1,221 @@
+/* 
+  My first attempt at a simple work of pure CSS art, meant to be a super mushroom. For this, I have used a couple 
+  different divs, editing their radius depending on what shapes I am looking for and applying gradients as shading.
+
+  Reference image used: https://www.seekpng.com/png/detail/49-490561_toad-mushroom-mario-kart.png
+*/
+
+/* ---------   BACKGROUND   --------- */
+body {
+  background-color: #1d1d1d;
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  background-color: #fff;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+/*
+  NOTE: Some parts of the header will run overtop the #container element, making portions impossible to
+  see on certain devices...
+*/
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 300%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ------------   FACE   ------------ */
+#face {
+  background: -webkit-radial-gradient(#fffa99, #c98355);
+  background: -moz-radial-gradient(#fffa99, #c98355);
+  background: -o-radial-gradient(#fffa99, #c98355);
+  background: radial-gradient(#fffa99, #c98355);
+
+  height: 107px;
+  width: 200px;
+  position: absolute;
+  margin: auto;
+
+  -webkit-transform: translate(76%, 278%);
+  -moz-transform: translate(76%, 278%);
+  -ms-transform: translate(76%, 278%);
+  -o-transform: translate(76%, 278%);
+  transform: translate(76%, 278%);
+
+  -webkit-border-bottom-left-radius: 70px;
+  -moz-border-radius-bottomleft: 70px;
+  border-bottom-left-radius: 70px;
+
+  -webkit-border-bottom-right-radius: 70px;
+  -moz-border-radius-bottomright: 70px;
+  border-bottom-right-radius: 70px;
+
+  -webkit-border-top-left-radius: 30px;
+  -moz-border-radius-topleft: 30px;
+  border-top-left-radius: 30px;
+
+  -webkit-border-top-right-radius: 30px;
+  -moz-border-radius-topright: 30px;
+  border-top-right-radius: 30px;
+}
+
+#right-eye {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#1d1d1d), to(#000));
+  background-image: -webkit-linear-gradient(bottom, #1d1d1d 0%, #000 100%);
+  background-image: -moz-linear-gradient(bottom, #1d1d1d 0%, #000 100%);
+  background-image: -o-linear-gradient(bottom, #1d1d1d 0%, #000 100%);
+  background-image: linear-gradient(0deg, #1d1d1d 0%, #000 100%);
+
+  height: 42px;
+  width: 20px;
+
+  -webkit-transform: translate(270%, 50%);
+  -moz-transform: translate(270%, 50%);
+  -ms-transform: translate(270%, 50%);
+  -o-transform: translate(270%, 50%);
+  transform: translate(270%, 50%);
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+#left-eye {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#1d1d1d), to(#000));
+  background-image: -webkit-linear-gradient(bottom, #1d1d1d 0%, #000 100%);
+  background-image: -moz-linear-gradient(bottom, #1d1d1d 0%, #000 100%);
+  background-image: -o-linear-gradient(bottom, #1d1d1d 0%, #000 100%);
+  background-image: linear-gradient(0deg, #1d1d1d 0%, #000 100%);
+
+  height: 42px;
+  width: 20px;
+
+  -webkit-transform: translate(620%, -48%);
+  -moz-transform: translate(620%, -48%);
+  -ms-transform: translate(620%, -48%);
+  -o-transform: translate(620%, -48%);
+  transform: translate(620%, -48%);
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+/* ------------   HEAD   ------------ */
+#red-portion {
+  background-image: -moz-linear-gradient(bottom, #5b0000 0%, #d30000 35%, #fb0000 100%);
+  background-image: -o-linear-gradient(bottom, #5b0000 0%, #d30000 35%, #fb0000 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#5b0000), color-stop(35%, #d30000), to(#fb0000));
+  background-image: -webkit-linear-gradient(bottom, #5b0000 0%, #d30000 35%, #fb0000 100%);
+  background-image: linear-gradient(0deg, #5b0000 0%, #d30000 35%, #fb0000 100%);
+  height: 230px;
+  width: 300px;
+  position: absolute;
+  margin: auto;
+
+  -webkit-transform: translate(35%, 50%);
+  -moz-transform: translate(35%, 50%);
+  -ms-transform: translate(35%, 50%);
+  -o-transform: translate(35%, 50%);
+  transform: translate(35%, 40%);
+
+  -webkit-border-top-left-radius: 150px;
+  -moz-border-radius-topleft: 150px;
+  border-top-left-radius: 150px;
+
+  -webkit-border-top-right-radius: 150px;
+  -moz-border-radius-topright: 150px;
+  border-top-right-radius: 150px;
+
+  -webkit-border-bottom-left-radius: 50px;
+  -moz-border-radius-bottomleft: 50px;
+  border-bottom-left-radius: 90px;
+
+  -webkit-border-bottom-right-radius: 50px;
+  -moz-border-radius-bottomright: 50px;
+  border-bottom-right-radius: 90px;
+}
+
+/*
+  Keeps the white spots hidden when they are outside the red area of the head. You would be able to see them
+  otherwise due to the gradients applied.
+*/
+#red-portion {
+  overflow: hidden;
+}
+
+#spot-center {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#aaa), to(#fff));
+  background-image: -webkit-linear-gradient(bottom, #aaa 0%, #fff 100%);
+  background-image: -moz-linear-gradient(bottom, #aaa 0%, #fff 100%);
+  background-image: -o-linear-gradient(bottom, #aaa 0%, #fff 100%);
+  background-image: linear-gradient(0deg, #aaa 0%, #fff 100%);
+
+  height: 140px;
+  width: 140px;
+
+  -webkit-transform: translate(58%, 40%);
+  -moz-transform: translate(58%, 40%);
+  -ms-transform: translate(58%, 40%);
+  -o-transform: translate(58%, 40%);
+  transform: translate(58%, 40%);
+
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  border-radius: 80px;
+}
+
+#spot-left {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#aaa), to(#fff));
+  background-image: -webkit-linear-gradient(bottom, #aaa 0%, #fff 100%);
+  background-image: -moz-linear-gradient(bottom, #aaa 0%, #fff 100%);
+  background-image: -o-linear-gradient(bottom, #aaa 0%, #fff 100%);
+  background-image: linear-gradient(0deg, #aaa 0%, #fff 100%);
+
+  height: 140px;
+  width: 140px;
+
+  -webkit-transform: translate(-65%, -70%);
+  -moz-transform: translate(-65%, -70%);
+  -ms-transform: translate(-65%, -70%);
+  -o-transform: translate(-65%, -70%);
+  transform: translate(-65%, -70%);
+
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  border-radius: 80px;
+}
+
+#spot-right {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#aaa), to(#fff));
+  background-image: -webkit-linear-gradient(bottom, #aaa 0%, #fff 100%);
+  background-image: -moz-linear-gradient(bottom, #aaa 0%, #fff 100%);
+  background-image: -o-linear-gradient(bottom, #aaa 0%, #fff 100%);
+  background-image: linear-gradient(0deg, #aaa 0%, #fff 100%);
+
+  height: 140px;
+  width: 140px;
+
+  -webkit-transform: translate(180%, -165%);
+  -moz-transform: translate(180%, -165%);
+  -ms-transform: translate(180%, -165%);
+  -o-transform: translate(180%, -165%);
+  transform: translate(180%, -165%);
+
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  border-radius: 80px;
+}
